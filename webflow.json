@@ -1,3 +1,4 @@
 {
-  "name": "simpleicons-search"
+  "name": "simpleicons-search",
+  "publicDir": "dist"
 }

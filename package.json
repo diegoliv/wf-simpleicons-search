@@ -5,12 +5,14 @@
   "main": "index.js",
   "scripts": {
     "build": "npm install && webflow extension bundle",
-    "dev": "npm install && concurrently -r \"vite\" \"webflow extension serve\""
+    "dev": "npm install && concurrently -r \"vite\" \"webflow extension serve\"",
+    "start": "concurrently \"vite build --watch\" \"webflow extension serve\""
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.3.4",
     "@webflow/designer-extension-typings": "*",
     "concurrently": "*",
+    "sass": "^1.66.1",
     "vite": "^4.4.9"
   },
   "dependencies": {
