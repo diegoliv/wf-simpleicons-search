@@ -4,9 +4,13 @@
   "private": true,
   "main": "index.js",
   "scripts": {
-    "build": "npm install && webflow extension bundle",
-    "dev": "npm install && concurrently -r \"vite\" \"webflow extension serve\"",
-    "start": "concurrently \"vite build --watch\" \"webflow extension serve\""
+    "dev": "npm install && concurrently -r \"npm run watch-vite\" \"webflow extension serve\"",
+    "build": "npm run build-vite && webflow extension bundle",
+    "preview": "vite preview",
+    "serve-webflow": "webflow extension serve",
+    "build-vite": "vite build",
+    "watch-vite": "vite build --watch",
+    "dev-vite": "vite"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.3.4",
@@ -16,6 +20,7 @@
     "vite": "^4.4.9"
   },
   "dependencies": {
+    "simple-icons": "^9.12.0",
     "vue": "^3.3.4"
   }
 }

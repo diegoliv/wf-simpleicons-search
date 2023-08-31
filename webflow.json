@@ -1,4 +1,5 @@
 {
   "name": "simpleicons-search",
-  "publicDir": "dist"
+  "publicDir": "dist",
+  "size": "comfortable"
 }
