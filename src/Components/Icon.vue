@@ -12,6 +12,7 @@
       </svg>
     </a>
     <div class="icon-wrapper" :style="{color: includeColor ? `#${icon.hex}`: 'currentcolor'}" v-html="icon.svg"></div>
+    <h2 class="icon-name" v-show="showName">{{ icon.title }}</h2>
   </div>
 </li>
 </template>
@@ -20,7 +21,7 @@
   // import { addOrCreateStyle } from "../utils/styles";
 
   export default {
-    props: ['icon', "includeColor"],
+    props: ['icon', "includeColor", "showName"],
     methods: {
       async insertIcon() {
         const el = await webflow.getSelectedElement();
@@ -100,6 +101,15 @@
       right: 0;
       fill: currentColor;
     }
+  }
+
+  .icon-name {
+    margin: 8px 0 0;
+    text-align: center;
+    font-size: var(--font-size-small);
+    font-weight: var(--font-weight-normal);
+    color: var(--text2);
+    line-height: 1.1;
   }
 
   .icon-guidelines {

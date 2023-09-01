@@ -1,24 +1,9 @@
-# simpleicons-search
+# Simple Icons For Webflow
 
-This is an example Webflow Designer extension written in TypeScript to get you started. Check out our [documentation](https://docs.developers.webflow.com/v2.0.0/docs/create-a-designer-extensions) for in-depth information about Designer Extension features and API.
+[Simple Icons](https://simpleicons.org/) is a collection of over 2600 Free SVG icons for popular brands. Easily search for icons and insert them within the Webflow Designer with just one click.
 
-## Developing
+## Special thanks to:
 
-```
-$ npm run dev
-```
-
-The above command does a few things:
-* Installs dependencies
-* Watches for changes in the `src/` folder and recompiles your TypeScript files, outputting an `index.js` file under the `public/` folder
-* Spins up a process that serves your extension files from under `public/`
-
-The command outputs the URL under which your extension is being served. Use this as the “Development URL” for your app in the Webflow Designer’s Apps panel. You can then launch the extension from the same place.
-
-## Deploying
-
-```
-$ npm run build
-```
-
-This will take the contents of the `./public` folder and prepare a `bundle.zip` file ready for you to upload as a Designer extension for your App.
+* [Web Bae](https://twitter.com/WebIsBae) For helping figure out the initial setup
+* [Dmitry Pimenov](https://twitter.com/dpim) For all the help on the Webflow support channel
+* [Webflow](https://webflow.com/) For an amazing site building experience
