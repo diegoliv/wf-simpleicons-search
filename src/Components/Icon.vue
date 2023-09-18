@@ -48,8 +48,6 @@
         const allStyles = await webflow.getAllStyles();
         const existingStyle = allStyles.find((style) => style.getName() === name);
 
-        console.log(allStyles, existingStyle, existingStyle.id);
-
         if (existingStyle && existingStyle.id) {
           el.setStyles([existingStyle]);
           return;
