@@ -46,8 +46,14 @@ jobs:
         with:
           add: 'package.json README.md'
           default_author: github_actions
-          message: "-m 'Version Bump to ${{steps.get-releases.outputs.si}}'"
-          tag: "-a ${{steps.get-releases.outputs.si}}"
+          message: "Version Bump to ${{steps.get-releases.outputs.si}}"
+      - name: Create and push git tag
+        if: steps.get-releases.outputs.lib != steps.get-releases.outputs.si
+        run: |
+          set -e
+          tag="${{ steps.get-releases.outputs.si }}"
+          git tag -a "${tag}" -m ""
+          git push origin "${tag}"
       - name: Create GitHub release
         if: steps.get-releases.outputs.lib != steps.get-releases.outputs.si
         id: create-release
