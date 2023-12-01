@@ -6,7 +6,5 @@ updates:
       interval: "weekly"
       day: "tuesday"
       time: "00:00"
-    allow:
-      - dependency-name: "simple-icons"
     reviewers:
       - "diegoliv"
