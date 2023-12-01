@@ -60,6 +60,7 @@ jobs:
           body: |
             See https://github.com/simple-icons/simple-icons/releases/tag/${{ steps.get-releases.outputs.si }}
       - name: Create Release Asset
+        if: steps.get-releases.outputs.lib != steps.get-releases.outputs.si
         uses: vimtor/action-zip@v1.1
         with:
           files: dist/

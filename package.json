@@ -20,7 +20,7 @@
     "vite": "^4.4.9"
   },
   "dependencies": {
-    "simple-icons": "^10.0.0",
+    "simple-icons": "9.18.0",
     "vue": "^3.3.4"
   }
 }
