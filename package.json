@@ -17,10 +17,10 @@
     "@webflow/designer-extension-typings": "*",
     "concurrently": "*",
     "sass": "^1.66.1",
-    "vite": "^5.0.4"
+    "vite": "4.5.1"
   },
   "dependencies": {
-    "simple-icons": "10.0.0",
+    "simple-icons": "10.1.0",
     "vue": "^3.3.4"
   }
 }

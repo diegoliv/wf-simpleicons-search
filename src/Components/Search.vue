@@ -1,14 +1,9 @@
 <template>
   <div class="search-wrapper">
     <div class="search-inner">
-      <svg
-        class="search-icon"
-        viewBox="0 0 16 16"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M10.4765 11.8907C9.49572 12.5892 8.29583 13 7 13C3.68629 13 1 10.3137 1 7C1 3.68629 3.68629 1 7 1C10.3137 1 13 3.68629 13 7C13 8.29583 12.5892 9.49572 11.8907 10.4765L14.9996 13.5854L13.5854 14.9996L10.4765 11.8907ZM11 7C11 9.20914 9.20914 11 7 11C4.79086 11 3 9.20914 3 7C3 4.79086 4.79086 3 7 3C9.20914 3 11 4.79086 11 7Z" fill="currentColor"></path>
-          </svg>
+      <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16">
+        <path fill="#F5F5F5" fill-rule="evenodd" d="M7.563 4a3.563 3.563 0 1 0 0 7.127 3.563 3.563 0 0 0 0-7.127ZM3 7.563a4.563 4.563 0 1 1 8.124 2.854l2.73 2.73-.708.707-2.729-2.73A4.563 4.563 0 0 1 3 7.563Z" clip-rule="evenodd"/>
+      </svg>
 
       <input
         class="search-input"
@@ -29,19 +24,26 @@ export default {
 
 <style lang="scss">
   .search-wrapper {
+    width: 100%;
     position: relative;
     padding: 8px;
+    color: var(--text1);
     border-bottom: 1px solid var(--border1);
   }
   .search-inner {
     display: flex;
     align-items: center;
-    min-height: 32px;
-    padding: 4px;
-    background: var(--background4);
+    justify-content: space-between;
+    width: 100%;
+    background-color: var(--backgroundInput);
+    color: var(--text4);
     border: 1px solid var(--border2);
-    color: var(--text1);
-    border-radius: 4px;
+    box-shadow: var(--input-inner-shadow);
+    border-radius: var(--border-radius);
+
+    &.active {
+      box-shadow: var(--input-inner-shadow), 0 0 0 1px var(--blueBorder);      
+    }
   }
   .search-icon {
     width: 16px;

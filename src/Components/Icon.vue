@@ -122,7 +122,7 @@
     height: 16px;
     min-width: 16px;
     font-size: var(--font-size-small);
-    background-color: var(--purpleIcon);
+    background-color: var(--purpleBackground);
     color: var(--actionPrimaryText);
     border-radius: 2px;
     line-height: 1;
@@ -134,7 +134,10 @@
       margin-right: 4px;
     }
 
-    &:hover .guidelines-label {display: block;}
+    &:hover {
+      background-color: var(--purpleBackgroundHover);
+      .guidelines-label {display: block;}
+    } 
 
     svg {
       width: 8px;

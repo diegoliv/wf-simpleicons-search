@@ -4,12 +4,13 @@
       <input type="checkbox" v-model="shouldIncludeColor" class="hidden" name="includecolors" id="includecolors">
       <label for="includecolors">
         <span class="checkbox">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 13 11"
+          <svg 
+            xmlns="http://www.w3.org/2000/svg" 
+            fill="none" 
+            viewBox="0 0 12 12" 
             v-show="shouldIncludeColor"
           >
-            <path fill="none" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" d="M11 2L5.5 8.5 2 5"></path>
+            <path stroke="currentColor" stroke-width="1.25" d="m2.5 6.5 2 2 5-5"/>
           </svg>
 
         </span>
@@ -21,12 +22,13 @@
       <input type="checkbox" v-model="shouldShowName" class="hidden" name="shownames" id="shownames">
       <label for="shownames">
         <span class="checkbox">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 13 11"
+          <svg 
+            xmlns="http://www.w3.org/2000/svg" 
+            fill="none" 
+            viewBox="0 0 12 12" 
             v-show="shouldShowName"
           >
-            <path fill="none" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" d="M11 2L5.5 8.5 2 5"></path>
+            <path stroke="currentColor" stroke-width="1.25" d="m2.5 6.5 2 2 5-5"/>
           </svg>
 
         </span>
@@ -83,22 +85,44 @@ export default {
     }
 
     .checkbox {
-      width: 13px;
-      height: 13px;
+      width: 12px;
+      height: 12px;
       display: flex;
+      align-items: center;
       margin-right: 4px;
-      border: 1px solid var(--border2);
-      background-color: var(--background4);
+      border: 1px solid var(--border3);
+      background-color: var(--backgroundInput);
       border-radius: 2px;
+      box-shadow: var(--boxShadows-input-inner);
+      
 
       svg {
-        width: 13px;
-        height: 11px;
+        width: 12px;
+        height: 12px;
       }
     }
 
     label {
       cursor: pointer;
+
+      &:hover .checkbox {
+        background-color: var(--background2);
+      }
+    }
+
+    input[type="checkbox"] {
+      &:checked + label {
+        .checkbox {
+          background-color: var(--actionPrimaryBackground);
+          border-color: var(--actionPrimaryBackground);
+          box-shadow: none;
+        }
+      }
+      &:focus + label {
+        .checkbox {
+          outline: 1px solid var(--blueBorder);
+        }
+      }
     }
   }
 </style>
