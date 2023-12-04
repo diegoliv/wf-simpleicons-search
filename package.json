@@ -17,7 +17,7 @@
     "@webflow/designer-extension-typings": "*",
     "concurrently": "*",
     "sass": "^1.66.1",
-    "vite": "^4.4.9"
+    "vite": "^5.0.4"
   },
   "dependencies": {
     "simple-icons": "10.0.0",
