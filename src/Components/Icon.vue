@@ -1,5 +1,5 @@
 <template>
-<li class="logo-item" @click="insertIcon">
+<button class="logo-item" @click="insertIcon" @keyup.prevent.space="insertIcon" tabindex="0">
   <div class="icon-sizer">
     <a :href="icon.guidelines" target="_blank" class="icon-guidelines" v-if="icon.guidelines">
       <span class="guidelines-label">Guidelines</span> 
@@ -14,7 +14,7 @@
     <div class="icon-wrapper" :style="{color: includeColor ? `#${icon.hex}`: 'currentcolor'}" v-html="icon.svg"></div>
     <h2 class="icon-name" v-show="showName">{{ icon.title }}</h2>
   </div>
-</li>
+</button>
 </template>
 
 <script>
@@ -69,6 +69,7 @@
 <style lang="scss">
 .logo-item {
   width: 100%;
+  max-width: calc(312px / 3);
   padding: 16px;
   position: relative;
   display: flex;
@@ -76,10 +77,16 @@
   justify-content: center;
   color: var(--actionPrimaryText);
   box-shadow: 0 0 0 1px var(--border1);
+  background-color: transparent;
+  border: none;
   cursor: pointer;
 
   &:hover {
     background-color: var(--background2);
+  }
+
+  &:focus {
+    outline: 2px solid var(--blueBorder);
   }
 
   .icon-sizer {
@@ -137,7 +144,11 @@
     &:hover {
       background-color: var(--purpleBackgroundHover);
       .guidelines-label {display: block;}
-    } 
+    }
+
+    &:focus {
+      outline: 2px solid var(--blueBorder);
+    }
 
     svg {
       width: 8px;

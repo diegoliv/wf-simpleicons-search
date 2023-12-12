@@ -1,7 +1,7 @@
 <template>
-  <div class="controls">
+  <aside class="controls">
     <div class="checkbox-group">
-      <input type="checkbox" v-model="shouldIncludeColor" class="hidden" name="includecolors" id="includecolors">
+      <input type="checkbox" v-model="shouldIncludeColor" class="hidden" name="includecolors" id="includecolors" tabindex="0">
       <label for="includecolors">
         <span class="checkbox">
           <svg 
@@ -19,7 +19,7 @@
       </label>
     </div>
     <div class="checkbox-group">
-      <input type="checkbox" v-model="shouldShowName" class="hidden" name="shownames" id="shownames">
+      <input type="checkbox" v-model="shouldShowName" class="hidden" name="shownames" id="shownames" tabindex="0">
       <label for="shownames">
         <span class="checkbox">
           <svg 
@@ -36,7 +36,7 @@
         Show names
       </label>
     </div>
-  </div>
+  </aside>
 </template>
 
 <script>
@@ -65,7 +65,7 @@ export default {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 8px;
-    top: 0;
+    top: -1px;
     z-index: 10;
     padding: 8px;
     color: var(--text1);
@@ -81,7 +81,8 @@ export default {
     }
 
     .hidden {
-      display: none;
+      opacity: 0;
+      position: absolute;
     }
 
     .checkbox {

@@ -1,7 +1,9 @@
 <template>
-  <div class="app-wrapper">
-    <Header />
-    <Search v-model="searchInput" />
+  <main class="app-wrapper">
+    <header>
+      <AppHeader />
+      <Search v-model="searchInput" />
+    </header>
     <Controls 
       v-model:includecolor="includeColor" 
       v-model:showname="showName" 
@@ -14,11 +16,11 @@
     />
     <EmptySearch v-if="!isValidInput && isElSelected" />
     <NotSelected v-if="!isElSelected" />
-  </div>
+  </main>
 </template>
 
 <script>
-import Header from './Components/Header.vue';
+import AppHeader from './Components/Header.vue';
 import Search from "./Components/Search.vue";
 import IconsList from "./Components/IconsList.vue";
 import EmptySearch from "./Components/EmptySearch.vue";
@@ -27,7 +29,7 @@ import Controls from "./Components/Controls.vue";
 
 export default {
   components: {
-    Header,
+    AppHeader,
     Search,
     IconsList,
     Controls,

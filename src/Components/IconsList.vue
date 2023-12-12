@@ -1,15 +1,15 @@
 <template>
-  <div>
-    <ul class="logos-list" v-if="filteredList.length > 0">
+  <section>
+    <div class="logos-list" v-if="filteredList.length > 0">
       <Icon 
         v-for="(icon,key) in filteredList" 
         :key="key" :icon="icon" 
         :include-color="includeColor" 
         :show-name="showName"
       />
-    </ul>
+    </div>
     <NotFound v-if="filteredList.length <= 0" />
-  </div>
+  </section>
 </template>
 
 <script>
@@ -49,6 +49,8 @@ export default {
 <style lang="scss">
 .logos-list {
   width: 100%;
+  max-width: 312px;
+  overflow: hidden;
   margin: 0;
   padding: 0;
   display: grid;

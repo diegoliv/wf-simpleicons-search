@@ -1,5 +1,5 @@
 <template>
-  <header>
+  <div class="app-header">
     <div class="header-title">
       <h1>Simple Icons</h1>
       <a href="https://simpleicons.org/" target="_blank">
@@ -7,11 +7,11 @@
       </a>
     </div>
     <p>This is a simple wrapper around <a href="https://simpleicons.org/" target="_blank">simpleicons.org</a> that allows you to search icons and load them into Webflow with one click.</p>
-  </header>
+  </div>
 </template>
 
 <style lang="scss">
-header {
+.app-header {
   padding: 8px;
   color: var(--text1);
 
@@ -20,6 +20,10 @@ header {
 
     &:hover {
       color: var(--actionPrimaryTextHover);
+    }
+
+    &:focus {
+      outline: 2px solid var(--blueBorder);
     }
   }
 
